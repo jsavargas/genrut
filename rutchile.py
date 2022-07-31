@@ -20,8 +20,8 @@ parser.add_argument('-m','--miss', action='store_true', help="Generar solo RUTs 
 parser.add_argument('-r','--random', action='store_true', help="Generar solo RUTs sin dígito verificador Ej: 12345678")
 parser.add_argument('-c','--count', type=int, default=10, help="Opcional. Especifica la cantidad de RUTs a generar (10 por default).")
 
-parser.add_argument('-b','--begin', type=str, required=True, help="Indique el RUT inicial de 8 dígitos Ej: 12345678")
-parser.add_argument('-e','--end', type=str, required=True, help="Indique el RUT inicial de 8 dígitos Ej: 12345678")
+parser.add_argument('-b','--begin', type=str, required=True, help="Indique el RUT inicial  Ej: 12345678")
+parser.add_argument('-e','--end', type=str, required=True, help="Indique el RUT inicial  Ej: 12345678")
 parser = parser.parse_args()
 
 

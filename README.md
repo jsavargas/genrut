@@ -17,8 +17,8 @@ optional arguments:
   -m, --miss                Generar solo RUTs sin dígito verificador Ej: 12345678
   -r, --random              Generar solo RUTs sin dígito verificador Ej: 12345678
   -c COUNT, --count COUNT   Opcional. Especifica la cantidad de RUTs a generar (10 por default).
-  -b BEGIN, --begin BEGIN   Indique el RUT inicial de 8 dígitos Ej: 12345678
-  -e END, --end END         Indique el RUT inicial de 8 dígitos Ej: 12345678
+  -b BEGIN, --begin BEGIN   Indique el RUT inicial Ej: 12345678
+  -e END, --end END         Indique el RUT inicial Ej: 12345678
 
 ```
 
