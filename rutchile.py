@@ -62,7 +62,7 @@ def main():
                 data.append(f"{result}-{digito}")
 
 
-        if parser.digit: print(f"{rut}-{digito}")
+        elif parser.digit: print(f"{rut}-{digito}")
         elif parser.list: print(f"{rut}{digito}")
         elif parser.miss: print(f"{rut}")
         elif parser.full:
