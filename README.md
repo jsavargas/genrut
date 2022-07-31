@@ -29,6 +29,8 @@ pip install -r requirements.txt
 
 ## EJEMPLOS
 
+```
+
 python3 rutchile.py  -b 7000000 -e 8000000 -f
 python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt
 python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt | tee
@@ -40,3 +42,5 @@ python3 rutchile.py  -b 10000000 -e 12123123 -f > ruts_chilenos.txt | tee
 python3 rutchile.py  -b 16000000 -e 17000000 -f
 python3 rutchile.py  -b 16000000 -e 17000000 -f > ruts_chilenos.txt
 python3 rutchile.py  -b 16000000 -e 17000000 -f > ruts_chilenos.txt | tee
+
+```
