@@ -68,4 +68,18 @@ python3 rutchile.py  -b 7000000 -e 8000000 -d -r -c100 > ruts_chilenos.txt
 python3 rutchile.py  -b 7000000 -e 8000000 -d -r -c100 > ruts_chilenos.txt | tee
 
 
+
+
+$ python3 rutchile.py  -b 16000000 -e 17000000 -r -d
+16003781-4
+16028930-9
+16139328-2
+16174943-5
+16220776-8
+16325952-4
+16498210-6
+16587115-4
+16782798-5
+16805911-6
+
 ```
