@@ -16,7 +16,7 @@ optional arguments:
   -l, --list                Generar RUTs sin puntos ni guión con dígito verificador Ej: 123456789
   -m, --miss                Generar solo RUTs sin dígito verificador Ej: 12345678
   -r, --random              Generar solo RUTs sin dígito verificador Ej: 12345678
-  -c COUNT, --count COUNT   Opcional. Especifica la cantidad de RUTs a generar (10 por default).
+  -c COUNT, --count COUNT   Opcional. Especifica la cantidad de RUTs a generar (10 por default). Requiere -r
   -b BEGIN, --begin BEGIN   Indique el RUT inicial Ej: 12345678
   -e END, --end END         Indique el RUT inicial Ej: 12345678
 
