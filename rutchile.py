@@ -73,8 +73,8 @@ def main():
         if (int(parser.end) - int(parser.begin)) > parser.count:  rnd = random.sample(data, parser.count)
         else :  rnd = random.choices(data, k=parser.count)
 
-        rnd.sort()
         rnd = list(set(rnd))
+        rnd.sort()
 
         for r in rnd:
             print(r)
