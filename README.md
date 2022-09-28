@@ -47,7 +47,7 @@ Argumento | Descripción | Ejemplo |
 ## EJEMPLOS
 
 Comando | Ejemplo |                              
-|-      |---------| -       |                              
+|-      |---------|                              
 python3 rutchile.py  -b 7000000 -e 8000000 -f                        | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000  |
 python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt    | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000 |
 
