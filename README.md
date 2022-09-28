@@ -44,6 +44,14 @@ Argumento | Descripción | Ejemplo |
 `-c` | Especifica la cantidad de RUTs a generar<br> Requiere -r (10 por default) | python3 rutchile.py -b 12000000 -e 13123123 -m -r -c 50
 
 
+## EJEMPLOS
+
+Comando | Ejemplo |                              
+|-      |---------| -       |                              
+python3 rutchile.py  -b 7000000 -e 8000000 -f                        | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000  |
+python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt    | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000 |
+
+
 
 ## EJEMPLOS
 
