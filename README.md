@@ -32,20 +32,18 @@ pip install -r requirements.txt
 
 ## Uso
 
-```
-+-----------+--------------------------------------------------------------------------------------+--------------------------------------------------------+
-| Argumento |                                     Descripción                                      |                 Ejemplo                                |
-+-----------+--------------------------------------------------------------------------------------+--------------------------------------------------------+
-|     -b    | Indique el RUT inicial. Ej: 12345678                                                 | python3 rutchile.py -b 12000000 -e 13123123 -f         |
-|     -e    | Indique el RUT final.   Ej: 12345678                                                 | python3 rutchile.py -b 12000000 -e 13123123 -f         |
-|     -f    | Generar diccionario de RUTs con puntos, guión y dígito verificador Ej: 12.345.678-9  | python3 rutchile.py -b 12000000 -e 13123123 -f         |
-|     -d    | Generar diccionario de RUTs solo con dígito verificador Ej: 12345678-9               | python3 rutchile.py -b 12000000 -e 13123123 -d         |
-|     -l    | Generar diccionario de RUTs sin puntos ni guión con dígito verificador Ej: 123456789 | python3 rutchile.py -b 12000000 -e 13123123 -l         |
-|     -m    | Generar diccionario de RUTs sin dígito verificador Ej: 12345678                      | python3 rutchile.py -b 12000000 -e 13123123 -m         |
-|     -r    | Generar diccionario de RUTs randoms, 10 por default                                  | python3 rutchile.py -b 12000000 -e 13123123 -m -r      |
-|     -c    | Especifica la cantidad de RUTs a generar (10 por default). Requiere -r               | python3 rutchile.py -b 12000000 -e 13123123 -m -r -c 50|
-+-----------+--------------------------------------------------------------------------------------+--------------------------------------------------------+
-```
+Argumento | Descripción | Ejemplo |
+|:--------:|-------------| -       |
+`-b` | Indique el RUT inicial. Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -f 
+`-e` | Indique el RUT final. Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -f 
+`-f` | Generar diccionario de RUTs<br>con puntos, guión y dígito verificador Ej: 12.345.678-9 | python3 rutchile.py -b 12000000 -e 13123123 -f 
+`-d` | Generar diccionario de RUTs<br>solo con dígito verificador Ej: 12345678-9 | python3 rutchile.py -b 12000000 -e 13123123 -d 
+`-l` | Generar diccionario de RUTs sin puntos ni guión con dígito verificador Ej: 123456789 | python3 rutchile.py -b 12000000 -e 13123123 -l 
+`-m` | Generar diccionario de RUTs<br>sin dígito verificador Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -m 
+`-r` | Generar diccionario de RUTs randoms,<br>10 por default | python3 rutchile.py -b 12000000 -e 13123123 -m -r 
+`-c` | Especifica la cantidad de RUTs a generar<br> Requiere -r (10 por default) | python3 rutchile.py -b 12000000 -e 13123123 -m -r -c 50
+
+
 
 ## EJEMPLOS
 
