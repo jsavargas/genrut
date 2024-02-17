@@ -2,7 +2,7 @@
 
 # Descripción
 
-**genRutChile.py** es una herramienta que permite generar diccionarios con **ruts chilenos válidos** en distintos formatos para nuestros ejercicios de Ethical Hacking.
+**genRutChile.py** es una herramienta que facilita la generación de diccionarios con números de **RUT chilenos válidos** en diversos formatos, contribuyendo así a nuestros ejercicios de Ethical Hacking.
 
 
 | Opción                                      | Descripción                                                         |
@@ -133,7 +133,5 @@ python3 genRutChile.py --inicio 10000000 --fin 10000010 --cantidad 5 --incluir_p
 10.000.009-1
 10.000.010-5
 ```
-
-
 
 
