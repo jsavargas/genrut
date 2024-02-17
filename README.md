@@ -2,90 +2,138 @@
 
 # Descripción
 
-**rutchile.py** es una herramienta que permite generar diccionarios con **ruts chilenos válidos** en distintos formator para nuestros ejercicios de Ethical Hacking.
-
-```
-usage: rutchile.py [-h] [-f] [-d] [-l] [-m] [-r] [-c COUNT] -b BEGIN -e END
-
-Generador de RUTs Chilenos válidos
-
-optional arguments:
-  -h, --help                show this help message and exit
-  -f, --full                Generar RUTs con puntos, guión y dígito verificador Ej: 12.345.678-9
-  -d, --digit               Generar RUTs solo con dígito verificador Ej: 12345678-9
-  -l, --list                Generar RUTs sin puntos ni guión con dígito verificador Ej: 123456789
-  -m, --miss                Generar solo RUTs sin dígito verificador Ej: 12345678
-  -r, --random              Generar solo RUTs sin dígito verificador Ej: 12345678
-  -c COUNT, --count COUNT   Opcional. Especifica la cantidad de RUTs a generar (10 por default). Requiere -r
-  -b BEGIN, --begin BEGIN   Indique el RUT inicial Ej: 12345678
-  -e END, --end END         Indique el RUT inicial Ej: 12345678
-
-```
+**genRutChile.py** es una herramienta que permite generar diccionarios con **ruts chilenos válidos** en distintos formatos para nuestros ejercicios de Ethical Hacking.
 
 
+| Opción                                      | Descripción                                                         |
+|---------------------------------------------|---------------------------------------------------------------------|
+| `--inicio`, `-i`                            | Número de inicio del rango. (Requerido)                             |
+| `--fin`, `-f`                               | Número de fin del rango. (Requerido)                                |
+| `--cantidad`, `-c`                          | Cantidad de RUTs a generar.                                         |
+| `--incluir_puntos_miles`, `-p`              | Incluir puntos de miles en los RUTs generados.                      |
+| `--incluir_digito_verificador`, `-d`        | Incluir el dígito verificador en los RUTs generados.                |
+| `--incluir_guion_digito_verificador`, `-gd` | Incluir guión con el dígito verificador en los RUTs generados.      |
 
-## Instalación
-
-```
-pip install -r requirements.txt
-```
 
 ## Uso
 
-Argumento | Descripción | Ejemplo |
-|:--------:|-------------| -       |
-`-b` | Indique el RUT inicial. Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -f 
-`-e` | Indique el RUT final. Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -f 
-`-f` | Generar diccionario de RUTs<br>con puntos, guión y dígito verificador Ej: 12.345.678-9 | python3 rutchile.py -b 12000000 -e 13123123 -f 
-`-d` | Generar diccionario de RUTs<br>solo con dígito verificador Ej: 12345678-9 | python3 rutchile.py -b 12000000 -e 13123123 -d 
-`-l` | Generar diccionario de RUTs sin puntos ni guión con dígito verificador Ej: 123456789 | python3 rutchile.py -b 12000000 -e 13123123 -l 
-`-m` | Generar diccionario de RUTs<br>sin dígito verificador Ej: 12345678 | python3 rutchile.py -b 12000000 -e 13123123 -m 
-`-r` | Generar diccionario de RUTs randoms,<br>10 por default | python3 rutchile.py -b 12000000 -e 13123123 -m -r 
-`-c` | Especifica la cantidad de RUTs a generar<br> Requiere -r (10 por default) | python3 rutchile.py -b 12000000 -e 13123123 -m -r -c 50
+### Rango sin incluir puntos ni dígito verificador:
 
+| Opción             | Descripción                                      |
+|--------------------|--------------------------------------------------|
+| `--inicio`, `-i`   | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`      | Número de fin del rango. (Requerido)             |
 
-## EJEMPLOS
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 > 10.txt
 
-Comando | Ejemplo |                              
-|-      |---------|                              
-python3 rutchile.py  -b 7000000 -e 8000000 -f                        | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000  |
-python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt    | 7000000<br>7000001<br>7000002<br>7000003<br>7000...<br>7999999<br>8000000 |
-
-
-
-## EJEMPLOS
-
+10000000
+10000001
+10000002
+...
+10000010
 ```
 
-python3 rutchile.py  -b 7000000 -e 8000000 -f
-python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt
-python3 rutchile.py  -b 7000000 -e 8000000 -f > ruts_chilenos.txt | tee
+### Rango con puntos de miles:
 
-python3 rutchile.py  -b 10000000 -e 12123123 -f
-python3 rutchile.py  -b 10000000 -e 12123123 -f > ruts_chilenos.txt
-python3 rutchile.py  -b 10000000 -e 12123123 -f > ruts_chilenos.txt | tee
+| Opción             | Descripción                                      |
+|--------------------|--------------------------------------------------|
+| `--inicio`, `-i`   | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`      | Número de fin del rango. (Requerido)             |
+| `--incluir_puntos_miles`, `-p`| Incluir puntos de miles en los RUTs generados.|
 
-python3 rutchile.py  -b 16000000 -e 17000000 -f
-python3 rutchile.py  -b 16000000 -e 17000000 -f > ruts_chilenos.txt
-python3 rutchile.py  -b 16000000 -e 17000000 -f > ruts_chilenos.txt | tee
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 --incluir_puntos_miles > rut.txt
 
-python3 rutchile.py  -b 7000000 -e 8000000 -d -r -c100 
-python3 rutchile.py  -b 7000000 -e 8000000 -d -r -c100 > ruts_chilenos.txt
-python3 rutchile.py  -b 7000000 -e 8000000 -d -r -c100 > ruts_chilenos.txt | tee
-
-
-
-
-$ python3 rutchile.py  -b 16000000 -e 17000000 -r -d
-16003781-4
-16028930-9
-16139328-2
-16174943-5
-16220776-8
-16325952-4
-16498210-6
-16587115-4
-16782798-5
-16805911-6
-
+10.000.000
+10.000.001
+10.000.002
+...
+10.000.010
 ```
+
+### Rango sin guión y con dígito verificador:
+
+| Opción                                | Descripción                                      |
+|---------------------------------------|--------------------------------------------------|
+| `--inicio`, `-i`                      | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`                         | Número de fin del rango. (Requerido)             |
+| `--incluir_digito_verificador`, `-d`  | Incluir el dígito verificador en los RUTs generados.|
+
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 --incluir_digito_verificador > rut.txt
+
+100000008
+100000016
+100000024
+...
+100000105
+```
+
+### Rango con puntos de miles y dígito verificador:
+
+| Opción                                | Descripción                                      |
+|---------------------------------------|--------------------------------------------------|
+| `--inicio`, `-i`                      | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`                         | Número de fin del rango. (Requerido)             |
+| `--incluir_puntos_miles`, `-p`        | Incluir puntos de miles en los RUTs generados.   |
+| `--incluir_digito_verificador`, `-d`  | Incluir el dígito verificador en los RUTs generados.|
+
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 --incluir_puntos_miles --incluir_digito_verificador > rut.txt
+
+10.000.0008
+10.000.0016
+10.000.0024
+...
+10.000.0105
+```
+
+### Rango con guión y dígito verificador:
+
+| Opción                                  | Descripción                                      |
+|-----------------------------------------|--------------------------------------------------|
+| `--inicio`, `-i`                        | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`                           | Número de fin del rango. (Requerido)             |
+| `--incluir_guion_digito_verificador`, `-gd` | Incluir guión con el dígito verificador en los RUTs generados.|
+
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 --incluir_guion_digito_verificador > rut.txt
+
+10000000-8
+10000001-6
+10000002-4
+...
+10000010-5
+```
+
+### Rango con todas las opciones:
+
+| Opción                                  | Descripción                                      |
+|-----------------------------------------|--------------------------------------------------|
+| `--inicio`, `-i`                        | Número de inicio del rango. (Requerido)          |
+| `--fin`, `-f`                           | Número de fin del rango. (Requerido)             |
+| `--cantidad`, `-c`                      | Cantidad de RUTs a generar.                      |
+| `--incluir_puntos_miles`, `-p`          | Incluir puntos de miles en los RUTs generados.   |
+| `--incluir_digito_verificador`, `-d`    | Incluir el dígito verificador en los RUTs generados.|
+| `--incluir_guion_digito_verificador`, `-gd` | Incluir guión con el dígito verificador en los RUTs generados.|
+
+**Ejemplo:**
+```bash
+python3 genRutChile.py --inicio 10000000 --fin 10000010 --cantidad 5 --incluir_puntos_miles --incluir_digito_verificador --incluir_guion_digito_verificador > rut.txt
+
+10.000.001-6
+10.000.002-4
+10.000.005-9
+10.000.009-1
+10.000.010-5
+```
+
+
+
+
